@@ -10,9 +10,10 @@ $(document).ready(function() {
     var alarmTime = $('#set-alarm').val();
     var newAlarm = new Alarm(alarmTime);
     setInterval(function() {
-      if (newAlarm.checkAlarm(moment().format("H:mm"))) {
+      if (newAlarm.checkAlarm(moment().format("H"),moment().format("mm"))) {
         alert('alarm');
       }
     }, 1000 );
+    console.log("alert")
   })
 });

@@ -10,13 +10,13 @@
 // I'd like the ability to change the amount of snooze time if I would actually prefer another ten minutes of sleep, instead of five.
 // As a user I would like to be able to set multiple alarms because mornings are hard.
 
-function Alarm(alarmTime) {
-  this.time = alarmTime;
-  this.hour = parseInt(this.time.split(':')[0]);
-  this.minute = parseInt(this.time.split(':')[1]);
-  this.checkAlarm = function(moment) {
-    var currentHour = parseInt(moment.split(':')[0]);
-    var currentMinute = parseInt(moment.split(':')[1]);
+function Alarm(time) {
+  this.timesplit = time.split(':');
+  this.hour = parseInt(this.timesplit[0]);
+  this.minute = parseInt(this.timesplit[1]);
+  this.checkAlarm = function(hour, minute) {
+    var currentHour = parseInt(hour);
+    var currentMinute = parseInt(minute);
     return ((currentHour >= this.hour) && (currentMinute >= this.minute))
   }
 }

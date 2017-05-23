@@ -17,8 +17,8 @@ function Alarm(time) {
   this.checkAlarm = function(hour, minute) {
     var currentHour = parseInt(hour);
     var currentMinute = parseInt(minute);
-    return ((currentHour >= this.hour) && (currentMinute >= this.minute))
-  }
+    return ((currentHour >= this.hour) && (currentMinute >= this.minute));
+  };
 }
 
 exports.alarmModule = Alarm;

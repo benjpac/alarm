@@ -1,2 +1,3 @@
-# template_npm_gulp
-Gulp template from Epicodus
+# alarm / weather
+
+repo contains an alarm clock app and a simple weather app which utilizes the weather.com api
